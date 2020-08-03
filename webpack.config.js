@@ -24,6 +24,11 @@ module.exports = {
                 loader: require.resolve('babel-loader')
             },
             {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
+            },
+            {
                 test:/\.s?css$/,
                 use:['style-loader','css-loader', 'sass-loader']
             },
